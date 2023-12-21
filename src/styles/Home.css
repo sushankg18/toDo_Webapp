@@ -1,0 +1,67 @@
+.home-component {
+  height: 90vh;
+  padding: .5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.home-main {
+  width: 90%;
+  height: 90%;
+  padding: .5rem 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.input-div {
+  width: fit-content;
+  height: 3rem;
+  border-radius: .7rem;
+  overflow: hidden;
+}
+
+.input-div > input {
+  outline: none;
+  background-color: whitesmoke;
+  border: none;
+  padding: .4rem 1rem;
+  font-size: 1.1rem;
+  width: 30rem ;
+  height: 100%; 
+}
+
+.input-div > button {
+  background-color: #c94306;
+  color: white;
+  font-size: 1.1rem;
+  padding: .3rem 1rem;
+  border: none;
+  cursor: pointer;
+  height: 100%; 
+}
+
+.tasks-div{
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.task{
+  width: 70%;
+  background-color: whitesmoke;
+  padding: .1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.task-right{
+  font-size: 1.3rem;
+  display: flex;
+  gap: 1rem;
+}
