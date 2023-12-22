@@ -55,10 +55,16 @@
 .task{
   width: 70%;
   background-color: whitesmoke;
-  padding: .1rem 2rem;
+  padding: .4rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.task > h3{
+  width: 50%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .task-right{
   font-size: 1.3rem;

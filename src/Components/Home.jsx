@@ -43,7 +43,7 @@ const Home = () => {
                 <div className='tasks-div'>
                     {tasks.map((taskItem, index) => (
                         <div key={index} className='task'>
-                            <h2>{taskItem.text}</h2>
+                            <h3>{taskItem.text}</h3>
                             <p>{taskItem.time}</p>
                             <div className='task-right'>
                                 <FaRegEdit cursor={'pointer'} />

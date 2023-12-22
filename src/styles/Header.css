@@ -5,6 +5,22 @@
     padding: .4rem 1rem;
     color: #fff;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+}
+.header-right{
+    display: flex;
+    gap: 1rem;
+}
+.header-right > p{
+    font-size: 1.1rem;
+}
+.header-right > button{
+    border: none;
+    padding: .3rem 1rem ;
+    border-radius: .5rem;
+    color: #c94306;
+    font-weight: bold;
+    font-size: .9rem;
+    cursor: pointer;
 }
