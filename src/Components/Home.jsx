@@ -55,7 +55,6 @@ const Home = () => {
 
             </div>
 
-            <h1>THIS SITE IS UNDER CONSTRUCTION</h1>
         </div>
     );
 };

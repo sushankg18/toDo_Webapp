@@ -1,4 +1,4 @@
-.header{
+.header {
     background-color: #c94306;
     width: 100vw;
     height: fit-content;
@@ -8,16 +8,25 @@
     justify-content: space-between;
     align-items: center;
 }
-.header-right{
+
+.header>h1 {
+    font-family: Afacad;
+    font-size: 2.2rem;
+
+}
+
+.header-right {
     display: flex;
     gap: 1rem;
 }
-.header-right > p{
+
+.header-right>p {
     font-size: 1.1rem;
 }
-.header-right > button{
+
+.header-right>button {
     border: none;
-    padding: .3rem 1rem ;
+    padding: .3rem 1rem;
     border-radius: .5rem;
     color: #c94306;
     font-weight: bold;
