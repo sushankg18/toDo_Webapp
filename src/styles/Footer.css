@@ -2,7 +2,7 @@
     width: 100vw;
     height: 3rem;
     background-color: #e26930;
-    position: absolute;
+    position: fixed;
     bottom: 0;
 }
 .footer-main > div{

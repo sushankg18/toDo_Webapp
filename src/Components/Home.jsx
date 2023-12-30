@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../styles/Home.css';
 import { MdDelete } from "react-icons/md";
 import { FaRegEdit } from "react-icons/fa";
+import Error from './Error';
 
 const Home = () => {
     const [task, setTask] = useState('');
@@ -13,7 +14,6 @@ const Home = () => {
 
     const handleTask = () => {
         if (task === '') {
-            alert('Please enter any task!');
         } else {
             const currentTime = new Date();
             const taskWithTime = {
