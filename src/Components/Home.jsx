@@ -7,13 +7,16 @@ import Error from './Error';
 const Home = () => {
     const [task, setTask] = useState('');
     const [tasks, setTasks] = useState([]);
+    const [showError, setShowError] = useState(false);
+
     const handleText = (e) => {
         setTask(e.target.value);
+        setShowError(false); // Hide error when user starts typing
     };
-
 
     const handleTask = () => {
         if (task === '') {
+            setShowError(true);
         } else {
             const currentTime = new Date();
             const taskWithTime = {
@@ -23,6 +26,7 @@ const Home = () => {
 
             setTasks([...tasks, taskWithTime]);
             setTask('');
+            setShowError(false); // Hide error after successfully adding a task
         }
     };
 
@@ -40,6 +44,8 @@ const Home = () => {
                     <button onClick={handleTask}>Add</button>
                 </div>
 
+                {showError && <Error />} {/* Conditionally render error component */}
+
                 <div className='tasks-div'>
                     {tasks.map((taskItem, index) => (
                         <div key={index} className='task'>
@@ -54,7 +60,6 @@ const Home = () => {
                 </div>
 
             </div>
-
         </div>
     );
 };

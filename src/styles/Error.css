@@ -1,8 +1,26 @@
 .loading-div{
-    border: 1px solid blue;
     z-index: 9;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding:2rem;
 }
 .loading-div> h1{
     color: red;
     font-size: 2.5rem;
+}
+.loading-div > button{
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    font-style: italic;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgb(227, 227, 227);
+    font-size: 1.1rem;
+    padding: .3rem 1.2rem;
 }
