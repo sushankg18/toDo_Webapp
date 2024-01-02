@@ -44,7 +44,7 @@ const Home = () => {
                     <button onClick={handleTask}>Add</button>
                 </div>
 
-                {showError && <Error />} {/* Conditionally render error component */}
+                {showError && <Error />} 
 
                 <div className='tasks-div'>
                     {tasks.map((taskItem, index) => (
