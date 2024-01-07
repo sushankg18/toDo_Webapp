@@ -11,7 +11,7 @@ const Home = () => {
 
   const handleText = (e) => {
     setTask(e.target.value);
-    setShowError(false); // Hide error when user starts typing
+    setShowError(false); 
   };
 
   const handleTask = () => {
@@ -39,9 +39,7 @@ const Home = () => {
   const handleErrorClose = () => {
     setShowError(false);
   };
-  if(showError){
-    
-    }
+  
   return (
     <div className='home-component'>
       <div className='home-main'>

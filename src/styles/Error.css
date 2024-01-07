@@ -1,4 +1,4 @@
-.loading-div{
+.loading-div {
     z-index: 9;
     background-color: whitesmoke;
     display: flex;
@@ -7,15 +7,18 @@
     flex-direction: column;
     top: 30%;
     gap: 1.2rem;
-    padding:2rem;
+    padding: 2rem;
     position: absolute;
     border-radius: .7rem;
+    filter: blur(1.4px);
 }
-.loading-div> h1{
+
+.loading-div>h1 {
     color: red;
     font-size: 2.5rem;
 }
-.loading-div > button{
+
+.loading-div>button {
     display: flex;
     align-items: center;
     gap: .3rem;
