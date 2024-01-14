@@ -16,7 +16,6 @@ const Home = () => {
 
   const handleTask = () => {
     if (task === '') {
-      setShowError(true);
     } else {
       const currentTime = new Date();
       const taskWithTime = {
