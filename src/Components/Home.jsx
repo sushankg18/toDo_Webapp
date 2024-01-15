@@ -8,14 +8,16 @@ const Home = () => {
   const [task, setTask] = useState('');
   const [tasks, setTasks] = useState([]);
   const [showError, setShowError] = useState(false);
+  const [editingIndex, setEditingIndex] = useState(null); // New state
 
   const handleText = (e) => {
     setTask(e.target.value);
-    setShowError(false); 
+    setShowError(false);
   };
 
   const handleTask = () => {
     if (task === '') {
+      setShowError(true);
     } else {
       const currentTime = new Date();
       const taskWithTime = {
@@ -23,7 +25,16 @@ const Home = () => {
         time: currentTime.toLocaleString(),
       };
 
-      setTasks([...tasks, taskWithTime]);
+      if (editingIndex !== null) {
+        const updatedTasks = [...tasks];
+        updatedTasks[editingIndex] = taskWithTime;
+        setTasks(updatedTasks);
+        setEditingIndex(null); // Reset editing index
+      } else {
+        // Otherwise, add a new task
+        setTasks([...tasks, taskWithTime]);
+      }
+
       setTask('');
       setShowError(false);
     }
@@ -35,9 +46,15 @@ const Home = () => {
     setTasks(updatedTasks);
   };
 
+  const handleEdit = (taskItem, index) => {
+    setTask(taskItem.text);
+    setEditingIndex(index);
+  };
+
   const handleErrorClose = () => {
     setShowError(false);
   };
+
   
   return (
     <div className='home-component'>
@@ -55,7 +72,7 @@ const Home = () => {
               <h3>{taskItem.text}</h3>
               <p>{taskItem.time}</p>
               <div className='task-right'>
-                <FaRegEdit cursor={'pointer'} />
+                <FaRegEdit cursor={'pointer'} onClick={()=> handleEdit(taskItem)} />
                 <MdDelete cursor={'pointer'} onClick={() => handleDelete(index)} />
               </div>
             </div>

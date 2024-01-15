@@ -10,7 +10,6 @@
     padding: 2rem;
     position: absolute;
     border-radius: .7rem;
-    filter: blur(1.4px);
 }
 
 .loading-div>h1 {
